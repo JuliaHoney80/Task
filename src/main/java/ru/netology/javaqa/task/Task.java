@@ -1,6 +1,9 @@
+package ru.netology.javaqa.task;
+
+import java.util.Objects;
 
 public class Task {
-    import java.util.Objects;
+
 
     protected int id;
 
@@ -25,7 +28,20 @@ public class Task {
 
     @Override
     public int hashCode() {
+
         return Objects.hash(id);
     }
+
+    /**
+     * Метод, проверяющий подходит ли эта задача поисковому запросу.
+     * Эта логика должна быть определена в наследниках, у каждого она будет своя
+     *
+     * @param query Поисковый запрос
+     * @return Ответ на вопрос, подходит ли эта задача под поисковый запрос
+     */
+    public boolean matches(String query) {
+        return false;
+    }
+
 }
 
